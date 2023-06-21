@@ -1,0 +1,677 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Items Controller",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/v1/item": {
+            "get": {
+                "tags": [
+                    "Items Controller"
+                ],
+                "summary": "listing of the Items",
+                "description": "Display a listing of the Items.",
+                "operationId": "bba92f7a03e0f7d9b80c3f1ec7fde511",
+                "requestBody": {
+                    "description": "listing of the Items",
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfull operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "data": {
+                                            "type": "json",
+                                            "example": {
+                                                "message": "success",
+                                                "data": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "Test",
+                                                        "price": "12.00",
+                                                        "seller": "Test",
+                                                        "created_at": "2023-06-19T19:55:18.000000Z",
+                                                        "updated_at": "2023-06-19T19:55:18.000000Z"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "Test",
+                                                        "price": "12.00",
+                                                        "seller": "Test",
+                                                        "created_at": "2023-06-19T19:56:36.000000Z",
+                                                        "updated_at": "2023-06-19T19:56:36.000000Z"
+                                                    },
+                                                    {
+                                                        "id": 5,
+                                                        "name": "asd",
+                                                        "price": "12.00",
+                                                        "seller": "Test",
+                                                        "created_at": "2023-06-19T20:06:34.000000Z",
+                                                        "updated_at": "2023-06-19T20:40:25.000000Z"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid service id.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "Invalid data."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "something went wrong please try again later.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "something went wrong please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/item/store": {
+            "post": {
+                "tags": [
+                    "Items Controller"
+                ],
+                "summary": "store Item",
+                "description": "Store a newly created resource in storage.",
+                "operationId": "6c686a426bb3b1c8ffb8771b6925be9d",
+                "requestBody": {
+                    "description": "store Item",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "type": "integer"
+                                    },
+                                    "seller": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfull operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "data": {
+                                            "type": "json",
+                                            "example": {
+                                                "message": "success",
+                                                "data": {
+                                                    "id": 5,
+                                                    "name": "asd",
+                                                    "price": "12.00",
+                                                    "seller": "Test",
+                                                    "created_at": "2023-06-19T20:06:34.000000Z",
+                                                    "updated_at": "2023-06-19T20:40:25.000000Z"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "Invalid Data."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "something went wrong please try again later.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "something went wrong please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/item/{id}": {
+            "get": {
+                "tags": [
+                    "Items Controller"
+                ],
+                "summary": "Get Item",
+                "description": "Display the specified resource.",
+                "operationId": "9bf69f338f7ea819b4fef8b1b35e4faf",
+                "requestBody": {
+                    "description": "store Item",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfull operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "data": {
+                                            "type": "json",
+                                            "example": {
+                                                "message": "success",
+                                                "data": {
+                                                    "id": 5,
+                                                    "name": "asd",
+                                                    "price": "12.00",
+                                                    "seller": "Test",
+                                                    "created_at": "2023-06-19T20:06:34.000000Z",
+                                                    "updated_at": "2023-06-19T20:40:25.000000Z"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "Invalid Data."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "something went wrong please try again later.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "something went wrong please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/item/update/{id}": {
+            "put": {
+                "tags": [
+                    "Items Controller"
+                ],
+                "summary": "Update Item",
+                "description": "Update the specified resource.",
+                "operationId": "dc3186b37286a343bb6f5e390a440d0a",
+                "requestBody": {
+                    "description": "Update Item",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "type": "string"
+                                    },
+                                    "seller": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfull operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "data": {
+                                            "type": "json",
+                                            "example": {
+                                                "message": "success",
+                                                "data": {
+                                                    "id": 5,
+                                                    "name": "asd",
+                                                    "price": "12.00",
+                                                    "seller": "Test",
+                                                    "created_at": "2023-06-19T20:06:34.000000Z",
+                                                    "updated_at": "2023-06-19T20:40:25.000000Z"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "Invalid Data."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "something went wrong please try again later.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "something went wrong please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/item/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Items Controller"
+                ],
+                "summary": "Delete Item",
+                "description": "Remove the specified resource from storage.",
+                "operationId": "7a4eb5202a971ec92a1fad4b8b31ad26",
+                "requestBody": {
+                    "description": "Delete Item",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfull operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "data": {
+                                            "type": "json",
+                                            "example": {
+                                                "message": "success",
+                                                "data": []
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "Invalid Data."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "something went wrong please try again later.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "something went wrong please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/item/total-price-current-month": {
+            "get": {
+                "tags": [
+                    "Items Controller"
+                ],
+                "summary": "Get Total price per month",
+                "description": "Get Total price the specified resource from storage.",
+                "operationId": "aceeed35e174de5f7f3f60bb52ae3c6a",
+                "requestBody": {
+                    "description": "Get Total price per month",
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfull operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "data": {
+                                            "type": "json",
+                                            "example": {
+                                                "message": "success",
+                                                "data": {
+                                                    "total_price": 24
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "Invalid data."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "something went wrong please try again later.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "something went wrong please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/item/total-price-average": {
+            "get": {
+                "tags": [
+                    "Items Controller"
+                ],
+                "summary": "Get Total price Avrage",
+                "description": "Get Total price the specified resource from storage.",
+                "operationId": "abaa98c14e2d6154e1b858523878ac54",
+                "requestBody": {
+                    "description": "Get Total price Avrage",
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfull operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "data": {
+                                            "type": "json",
+                                            "example": {
+                                                "message": "success",
+                                                "data": {
+                                                    "total_price_average": 12
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "Invalid data."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "something went wrong please try again later.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error_code": {
+                                            "type": "integer",
+                                            "example": 400
+                                        },
+                                        "error_message": {
+                                            "type": "string",
+                                            "example": "something went wrong please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

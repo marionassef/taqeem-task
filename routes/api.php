@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 #### Items Routes
 Route::prefix('v1/item')->group(function (){
-    Route::get('list', [ItemsApiController::class, 'findAll'])->name('item.list');
+    Route::get('', [ItemsApiController::class, 'findAll'])->name('item.list');
     Route::get('total-price-current-month', [ItemsApiController::class, 'totalPriceCurrentMonth'])->name('item.total-price');
     Route::get('total-price-average', [ItemsApiController::class, 'totalPriceAverage'])->name('item.total-price-average');
     Route::post('store', [ItemsApiController::class, 'store'])->name('item.create');
