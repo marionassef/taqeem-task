@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\ItemsApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,11 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 #### Items Routes
 Route::prefix('v1/item')->group(function (){
-    Route::get('list', [ItemsController::class, 'findAll'])->name('item.list');
-    Route::get('total-price-current-month', [ItemsController::class, 'totalPriceCurrentMonth'])->name('item.total-price');
-    Route::get('total-price-average', [ItemsController::class, 'totalPriceAverage'])->name('item.total-price-average');
-    Route::post('store', [ItemsController::class, 'store'])->name('item.create');
-    Route::get('details/{id}', [ItemsController::class, 'getOne'])->name('item.details');
-    Route::put('update/{id}', [ItemsController::class, 'update'])->name('item.update');
-    Route::delete('delete/{id}', [ItemsController::class, 'delete'])->name('item.delete');
+    Route::get('list', [ItemsApiController::class, 'findAll'])->name('item.list');
+    Route::get('total-price-current-month', [ItemsApiController::class, 'totalPriceCurrentMonth'])->name('item.total-price');
+    Route::get('total-price-average', [ItemsApiController::class, 'totalPriceAverage'])->name('item.total-price-average');
+    Route::post('store', [ItemsApiController::class, 'store'])->name('item.create');
+    Route::get('details/{id}', [ItemsApiController::class, 'getOne'])->name('item.details');
+    Route::put('update/{id}', [ItemsApiController::class, 'update'])->name('item.update');
+    Route::delete('delete/{id}', [ItemsApiController::class, 'delete'])->name('item.delete');
 });

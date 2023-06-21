@@ -1,0 +1,2508 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>api/v1 Reference</title>
+
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/all.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+        $(function () {
+            setupLanguages(["bash", "javascript"]);
+        });
+    </script>
+</head>
+
+<body class="">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png"/>
+      </span>
+</a>
+<div class="tocify-wrapper">
+    <img src="images/logo.png"/>
+    <div class="lang-selector">
+        <a data-language-name="bash" href="#">bash</a>
+        <a data-language-name="javascript" href="#">javascript</a>
+    </div>
+    <div class="search">
+        <input class="search" id="input-search" placeholder="Search" type="text">
+    </div>
+    <ul class="search-results"></ul>
+    <div id="toc">
+    </div>
+    <ul class="toc-footer">
+        <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+    </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <!-- START_INFO -->
+        <h1>Info</h1>
+        <p>Welcome to the generated api/v1 reference.
+            <a href="http://165.227.120.37:9000/docs/collection.json">Get Postman Collection</a></p>
+        <!-- END_INFO -->
+        <h1>general</h1>
+        <!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+        <h2>Admin Login</h2>
+        <blockquote>
+            <p>http://165.227.120.37/api/v1/register</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/register" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/login",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "first_name" : "required",
+              "last_name" : "required",
+              "email" : "required",
+              "password" : "required",
+              "phone" : "required",
+              "date_of_birth" : "required ex:1991-2-9",
+              "occupation" : "optional",
+              "gender" : "optional",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "03122520-93e6-11ea-bb46-6f635dbf84e2",
+        "first_name": "Charlene",
+        "last_name": "Mayfield-Davis",
+        "facebook_id": null,
+        "email": "mario@gmail.com",
+        "apple_id": "001787.9aeac3e281394a239f4d52d7c6257a51.0017",
+        "phone": "",
+        "image": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10157811022170589&height=800&width=800&ext=1601561537&hash=AeSs256BoFKo8FRB",
+        "date_of_birth": "2020-12-21",
+        "occupation": null,
+        "profile_status": 1,
+        "id_image_front": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "id_image_back": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "bank_statement": "",
+        "retirement_letter": null,
+        "retirement_letter_verified": 0,
+        "verify_id_image": 3,
+        "hr_letter": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_hr_letter": 3,
+        "utility_bill": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_utility_bill": 3,
+        "phone_verification_code": null,
+        "email_verification_code": null,
+        "verify_phone": 3,
+        "marital_status": null,
+        "country": null,
+        "address": null,
+        "address_verified_by_admin": "3",
+        "gender": null,
+        "language": null,
+        "score": 450.12,
+        "number_of_dependents": null,
+        "employment_status": null,
+        "income": null,
+        "liability": null,
+        "personal_information_verified": 2,
+        "employment_history_verified": 3,
+        "income_verified": 3,
+        "liabilities_verified": 3,
+        "reputation_points": 0,
+        "got_rp_for_join_app": 0,
+        "got_rp_for_social_login": 0,
+        "got_rp_for_fully_verified": 0,
+        "created_at": "2020-05-12T02:17:49.000000Z",
+        "updated_at": "2020-09-11T13:15:15.000000Z",
+        "deleted_at": null,
+        "freezed_points": 298.72,
+        "available_points": 151.4,
+        "gained_points": 2.36,
+        "next_payment": "",
+        "next_payout": "",
+        "active_tanda_count": 0,
+        "available_limit": "300",
+        "max_limit": "300",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTkyZDAyYzI0YTA0ZTQxMDZkNTgxYzQxMmQ1MzE0M2E3MjQ3MWJmMjA1MTU4YWZmMjE0MmU2NGNkNmExN2I2ZTE3MGU5YTJiMGNmOTRlZWQiLCJpYXQiOjE2MDA1MjcyNTksIm5iZiI6MTYwMDUyNzI1OSwiZXhwIjoxNjMyMDYzMjU5LCJzdWIiOiIwMzEyMjUyMC05M2U2LTExZWEtYmI0Ni02ZjYzNWRiZjg0ZTIiLCJzY29wZXMiOltdfQ.I6XtvKjpe_caakGSdGsElg0gn_4aUrIMboOab87wQmw2QalIQhH41ml0elGZenmNvRfeeQrVjnn2HR2LwR0o-q1C3eiU3vE130D9odfE-6mjmWZt6yV9FskUGcPDJ_VItraWQA6tggwd8UxQZbUXiqvyrJtAiBHGS1nCnsrH1ZnTn0LM4sq2lidCzFAqQomtRaZUpvO7v8xg_4hrHq0FwsxRTqWXkB7YTpJ7c-Q5VoO_scOhGHjLbmGzzBRbhnLNM1K4qFIZl4iDlFM3CCtY5AlazC3GGit-lkEj56ZWIsmp3ktXRZaAQloH7Z55NKupFtbCy9NqAnybhvGRXCZDVcLpYaPtSBQWNsO3AmxVfq2It4pxZ3W0kptx0chXXTBa1AuV7iXOIqlyDt0xgkoJYs9DG6le_gJQE6dB4LAWvOz7hJx5A4TYMS85GvxAKvY2hUN_PgUglch1uTrAIfLFehbbQvRZ6uPlygLOkWimNNjM-N0BuQFUBsWRs38viCJvRhdkuH4H-GVSUClbtGR_-kv1LjqVdLKU9NmDXZ9kN9Pum88CuKqWufJFKKxE-NzVuHb03ZzAt9CSoMwSRIJXapSM64DpfpQ_iGd_cEhJA0gUHrdNGdVqD-Gq48UfrrQoCGRtYceXrv2elT_nQWSIYWaYyYeHy8GV5ME-x743_Uo"
+    },
+    "message": "Success"
+}</code></pre>
+        <h3>HTTP Request</h3>
+        <p><code>POST login</code></p>
+        <!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+        <!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+        <h2>login</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/login" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/register",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "email" : "required",
+              "password" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "03122520-93e6-11ea-bb46-6f635dbf84e2",
+        "first_name": "Charlene",
+        "last_name": "Mayfield-Davis",
+        "facebook_id": null,
+        "email": "mario@gmail.com",
+        "apple_id": "001787.9aeac3e281394a239f4d52d7c6257a51.0017",
+        "phone": "",
+        "image": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10157811022170589&height=800&width=800&ext=1601561537&hash=AeSs256BoFKo8FRB",
+        "date_of_birth": "2020-12-21",
+        "occupation": null,
+        "profile_status": 1,
+        "id_image_front": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "id_image_back": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "bank_statement": "",
+        "retirement_letter": null,
+        "retirement_letter_verified": 0,
+        "verify_id_image": 3,
+        "hr_letter": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_hr_letter": 3,
+        "utility_bill": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_utility_bill": 3,
+        "phone_verification_code": null,
+        "email_verification_code": null,
+        "verify_phone": 3,
+        "marital_status": null,
+        "country": null,
+        "address": null,
+        "address_verified_by_admin": "3",
+        "gender": null,
+        "language": null,
+        "score": 450.12,
+        "number_of_dependents": null,
+        "employment_status": null,
+        "income": null,
+        "liability": null,
+        "personal_information_verified": 2,
+        "employment_history_verified": 3,
+        "income_verified": 3,
+        "liabilities_verified": 3,
+        "reputation_points": 0,
+        "got_rp_for_join_app": 0,
+        "got_rp_for_social_login": 0,
+        "got_rp_for_fully_verified": 0,
+        "created_at": "2020-05-12T02:17:49.000000Z",
+        "updated_at": "2020-09-11T13:15:15.000000Z",
+        "deleted_at": null,
+        "freezed_points": 298.72,
+        "available_points": 151.4,
+        "gained_points": 2.36,
+        "next_payment": "",
+        "next_payout": "",
+        "active_tanda_count": 0,
+        "available_limit": "300",
+        "max_limit": "300",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTkyZDAyYzI0YTA0ZTQxMDZkNTgxYzQxMmQ1MzE0M2E3MjQ3MWJmMjA1MTU4YWZmMjE0MmU2NGNkNmExN2I2ZTE3MGU5YTJiMGNmOTRlZWQiLCJpYXQiOjE2MDA1MjcyNTksIm5iZiI6MTYwMDUyNzI1OSwiZXhwIjoxNjMyMDYzMjU5LCJzdWIiOiIwMzEyMjUyMC05M2U2LTExZWEtYmI0Ni02ZjYzNWRiZjg0ZTIiLCJzY29wZXMiOltdfQ.I6XtvKjpe_caakGSdGsElg0gn_4aUrIMboOab87wQmw2QalIQhH41ml0elGZenmNvRfeeQrVjnn2HR2LwR0o-q1C3eiU3vE130D9odfE-6mjmWZt6yV9FskUGcPDJ_VItraWQA6tggwd8UxQZbUXiqvyrJtAiBHGS1nCnsrH1ZnTn0LM4sq2lidCzFAqQomtRaZUpvO7v8xg_4hrHq0FwsxRTqWXkB7YTpJ7c-Q5VoO_scOhGHjLbmGzzBRbhnLNM1K4qFIZl4iDlFM3CCtY5AlazC3GGit-lkEj56ZWIsmp3ktXRZaAQloH7Z55NKupFtbCy9NqAnybhvGRXCZDVcLpYaPtSBQWNsO3AmxVfq2It4pxZ3W0kptx0chXXTBa1AuV7iXOIqlyDt0xgkoJYs9DG6le_gJQE6dB4LAWvOz7hJx5A4TYMS85GvxAKvY2hUN_PgUglch1uTrAIfLFehbbQvRZ6uPlygLOkWimNNjM-N0BuQFUBsWRs38viCJvRhdkuH4H-GVSUClbtGR_-kv1LjqVdLKU9NmDXZ9kN9Pum88CuKqWufJFKKxE-NzVuHb03ZzAt9CSoMwSRIJXapSM64DpfpQ_iGd_cEhJA0gUHrdNGdVqD-Gq48UfrrQoCGRtYceXrv2elT_nQWSIYWaYyYeHy8GV5ME-x743_Uo"
+    },
+    "message": "Success"
+}</code></pre>
+
+        <h3>HTTP Request</h3>
+        <p><code>POST login</code></p>
+
+
+        <p><code>POST loginWithFaceBook</code></p>
+        <!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+        <!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+        <h2>loginWithFaceBook</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/loginWithFacebook" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/loginWithFacebook",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "facebook_token" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "03122520-93e6-11ea-bb46-6f635dbf84e2",
+        "first_name": "Charlene",
+        "last_name": "Mayfield-Davis",
+        "facebook_id": null,
+        "email": "mario@gmail.com",
+        "apple_id": "001787.9aeac3e281394a239f4d52d7c6257a51.0017",
+        "phone": "",
+        "image": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10157811022170589&height=800&width=800&ext=1601561537&hash=AeSs256BoFKo8FRB",
+        "date_of_birth": "2020-12-21",
+        "occupation": null,
+        "profile_status": 1,
+        "id_image_front": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "id_image_back": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "bank_statement": "",
+        "retirement_letter": null,
+        "retirement_letter_verified": 0,
+        "verify_id_image": 3,
+        "hr_letter": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_hr_letter": 3,
+        "utility_bill": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_utility_bill": 3,
+        "phone_verification_code": null,
+        "email_verification_code": null,
+        "verify_phone": 3,
+        "marital_status": null,
+        "country": null,
+        "address": null,
+        "address_verified_by_admin": "3",
+        "gender": null,
+        "language": null,
+        "score": 450.12,
+        "number_of_dependents": null,
+        "employment_status": null,
+        "income": null,
+        "liability": null,
+        "personal_information_verified": 2,
+        "employment_history_verified": 3,
+        "income_verified": 3,
+        "liabilities_verified": 3,
+        "reputation_points": 0,
+        "got_rp_for_join_app": 0,
+        "got_rp_for_social_login": 0,
+        "got_rp_for_fully_verified": 0,
+        "created_at": "2020-05-12T02:17:49.000000Z",
+        "updated_at": "2020-09-11T13:15:15.000000Z",
+        "deleted_at": null,
+        "freezed_points": 298.72,
+        "available_points": 151.4,
+        "gained_points": 2.36,
+        "next_payment": "",
+        "next_payout": "",
+        "active_tanda_count": 0,
+        "available_limit": "300",
+        "max_limit": "300",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTkyZDAyYzI0YTA0ZTQxMDZkNTgxYzQxMmQ1MzE0M2E3MjQ3MWJmMjA1MTU4YWZmMjE0MmU2NGNkNmExN2I2ZTE3MGU5YTJiMGNmOTRlZWQiLCJpYXQiOjE2MDA1MjcyNTksIm5iZiI6MTYwMDUyNzI1OSwiZXhwIjoxNjMyMDYzMjU5LCJzdWIiOiIwMzEyMjUyMC05M2U2LTExZWEtYmI0Ni02ZjYzNWRiZjg0ZTIiLCJzY29wZXMiOltdfQ.I6XtvKjpe_caakGSdGsElg0gn_4aUrIMboOab87wQmw2QalIQhH41ml0elGZenmNvRfeeQrVjnn2HR2LwR0o-q1C3eiU3vE130D9odfE-6mjmWZt6yV9FskUGcPDJ_VItraWQA6tggwd8UxQZbUXiqvyrJtAiBHGS1nCnsrH1ZnTn0LM4sq2lidCzFAqQomtRaZUpvO7v8xg_4hrHq0FwsxRTqWXkB7YTpJ7c-Q5VoO_scOhGHjLbmGzzBRbhnLNM1K4qFIZl4iDlFM3CCtY5AlazC3GGit-lkEj56ZWIsmp3ktXRZaAQloH7Z55NKupFtbCy9NqAnybhvGRXCZDVcLpYaPtSBQWNsO3AmxVfq2It4pxZ3W0kptx0chXXTBa1AuV7iXOIqlyDt0xgkoJYs9DG6le_gJQE6dB4LAWvOz7hJx5A4TYMS85GvxAKvY2hUN_PgUglch1uTrAIfLFehbbQvRZ6uPlygLOkWimNNjM-N0BuQFUBsWRs38viCJvRhdkuH4H-GVSUClbtGR_-kv1LjqVdLKU9NmDXZ9kN9Pum88CuKqWufJFKKxE-NzVuHb03ZzAt9CSoMwSRIJXapSM64DpfpQ_iGd_cEhJA0gUHrdNGdVqD-Gq48UfrrQoCGRtYceXrv2elT_nQWSIYWaYyYeHy8GV5ME-x743_Uo"
+    },
+    "message": "Success"
+}</code></pre>
+
+        <h3>HTTP Request</h3>
+        <p><code>POST loginWithFacebook</code></p>
+
+
+        <h2>emailVerification</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/emailVerification" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/emailVerification",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "email" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "massage": "Successful"
+        }</code></pre>
+
+        <h2>phoneVerification</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/phoneVerification" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/phoneVerification",
+    "method": "POST",
+    "headers": {
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "phone" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "massage": "Successful"
+        }</code></pre>
+
+        <h2>verifyDigits</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/verifyDigits" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37:9000/api/v1/verifyDigits",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "email" : "required",
+              "digits" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "massage": "Successful"
+        }</code></pre>
+
+        <h2>verifyPhoneDigits</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/verifyPhoneDigits" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37:9000/api/v1/verifyPhoneDigits",
+    "method": "POST",
+    "headers": {
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "phone" : "required",
+              "digits" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "massage": "Successful"
+        }</code></pre>
+
+        <h2>ifPhoneExist</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/ifPhoneExist" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/ifPhoneExist",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "phone" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "massage": "Successful"
+        }</code></pre>
+
+        <h2>ifEmailExist</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/ifEmailExist" \
+-H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/ifEmailExist",
+    "method": "POST",
+    "headers": {
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "email" : "required",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "massage": "Successful"
+        }</code></pre>
+
+
+        <h2>createPrivateTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/createPrivateTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/createPrivateTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+              "number_of_rounds" : "required",
+              "contribution_amount" : "required",
+              "payout_amount" : "required",
+              "nickname" : "optional",
+              "start_date" : "required|date format:year-month-day",
+              "end_date" : "required|date format:year-month-day",
+              }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "579ce546-0370-11e8-b11b-0275d16e75ac",
+        "code": "yJWEY",
+        "nickname": "Mario's",
+        "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+        "number_of_rounds": "6",
+        "contribution_amount": "1000",
+        "payout_amount": 6000,
+        "start_date": "2018-2-1",
+        "end_date": "2018-08-01",
+        "type": "Private",
+        "updated_at": "2018-01-27 14:42:47",
+        "created_at": "2018-01-27 14:42:47",
+        "slots": [
+            {
+                "id": "579d62d2-0370-11e8-ba32-0275d16e75ac",
+                "tanda_id": "579ce546-0370-11e8-b11b-0275d16e75ac",
+                "round_number": 1,
+                "user_id": null,
+                "slot_minimum_score": null,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2018-02-01",
+                "created_at": "2018-01-27 14:42:47",
+                "updated_at": "2018-01-27 14:42:47"
+            },
+            {
+                "id": "579dcccc-0370-11e8-a4d6-0275d16e75ac",
+                "tanda_id": "579ce546-0370-11e8-b11b-0275d16e75ac",
+                "round_number": 2,
+                "user_id": null,
+                "slot_minimum_score": null,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2018-03-01",
+                "created_at": "2018-01-27 14:42:47",
+                "updated_at": "2018-01-27 14:42:47"
+            },
+            {
+                "id": "579e1efc-0370-11e8-ace4-0275d16e75ac",
+                "tanda_id": "579ce546-0370-11e8-b11b-0275d16e75ac",
+                "round_number": 3,
+                "user_id": null,
+                "slot_minimum_score": null,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2018-04-01",
+                "created_at": "2018-01-27 14:42:47",
+                "updated_at": "2018-01-27 14:42:47"
+            },
+            {
+                "id": "579e7b72-0370-11e8-afe3-0275d16e75ac",
+                "tanda_id": "579ce546-0370-11e8-b11b-0275d16e75ac",
+                "round_number": 4,
+                "user_id": null,
+                "slot_minimum_score": null,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2018-05-01",
+                "created_at": "2018-01-27 14:42:47",
+                "updated_at": "2018-01-27 14:42:47"
+            },
+            {
+                "id": "579edef0-0370-11e8-ab8a-0275d16e75ac",
+                "tanda_id": "579ce546-0370-11e8-b11b-0275d16e75ac",
+                "round_number": 5,
+                "user_id": null,
+                "slot_minimum_score": null,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2018-06-01",
+                "created_at": "2018-01-27 14:42:47",
+                "updated_at": "2018-01-27 14:42:47"
+            },
+            {
+                "id": "579f338c-0370-11e8-aad4-0275d16e75ac",
+                "tanda_id": "579ce546-0370-11e8-b11b-0275d16e75ac",
+                "round_number": 6,
+                "user_id": null,
+                "slot_minimum_score": null,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2018-07-01",
+                "created_at": "2018-01-27 14:42:47",
+                "updated_at": "2018-01-27 14:42:47"
+            }
+        ]
+    },
+    "message": "Successful"
+}</code></pre>
+
+        <h2>getMyActiveTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/getMyActiveTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getMyActiveTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+                        "limit" : "",
+                        "offset" : "",
+}</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [],
+    "message": "Successful"
+}</code></pre>
+
+        <h2>getMyPendingTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/getMyPendingTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getMyPendingTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "limit" : "",
+            "offset" : "",
+            }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        {
+            "id": "8890a6fc-d6a1-11e7-b07e-0275d16e75ac",
+            "code": "15121374924581",
+            "user_id": null,
+            "number_of_rounds": 20,
+            "false_placement": 0,
+            "false_placement_range": null,
+            "contribution_amount": 20000,
+            "payout_amount": 2000,
+            "ability_to_split_rounds": 0,
+            "start_date": "2017-11-01",
+            "end_date": "2018-06-01",
+            "type": "Public",
+            "status": "Pending",
+            "created_at": "2017-11-30 18:49:27",
+            "updated_at": "2017-12-01 14:11:32",
+            "count": 1,
+            "ready_to_start": 1 or 0,
+        }
+    ],
+    "message": "Successful"
+}</code></pre>
+
+        <h2>getPublicTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/getPublicTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getPublicTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "payout_date" : "required",
+            "monthly_contribution" : "required",
+            "limit" : "",
+            "offset" : "",
+            }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        {
+            "id": "8890a6fc-d6a1-11e7-b07e-0275d16e75ac",
+            "code": "15121374924581",
+            "contribution_amount": 20000,
+            "payout_amount": 2000,
+            "start_date": "2017-11-01",
+            "end_date": "2018-06-01",
+            "type": "Public",
+            "status": "Pending",
+            "count": "",
+            "payout_date": "",
+            "slot_id": ""
+        }
+    ],
+    "message": "Successful"
+}</code></pre>
+
+
+        <h2>joinPublicTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/joinPublicTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/joinPublicTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id" : "required",
+            }</code></pre>
+        <pre><code>response:{"status":0,"message":"Successful"}</code></pre>
+
+
+        <h2>updateUserData</h2>
+        <h3>Please note that you have to send at least one parameter</h3>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/updateUserData" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/updateUserData",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "first_name" : "",
+            "last_name" : "",
+            "email" : "",
+            "phone" : "",
+            "date_of_birth" : "",
+            "occupation" : "",
+            "marital_status" : "",
+            "address" : "",
+            "country" : "",
+            "gender" : "",
+            "language" : "",
+            "income" : "",
+            "liability" : "",
+            "number_of_dependents" : "",
+            "employment_status" : "",
+            "image" : "",
+            "id_image" : "",
+            "hr_letter" : "",
+            "utility_bill" : "",
+            }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+        "first_name": "amr",
+        "last_name": "ahmed",
+        "facebook_id": null,
+        "email": "mario@gmail.com",
+        "phone": "962128174262",
+        "image": "",
+        "date_of_birth": "2018-05-14",
+        "occupation": "dfghjkl;lkjhgfghjkl;ppolikjuhygthjuikop;olkijhg",
+        "profile_status": 0,
+        "id_image": "gU7a8OK1SM8.png",
+        "verify_id_image": 0,
+        "hr_letter": "",
+        "verify_hr_letter": 0,
+        "utility_bill": "",
+        "verify_utility_bill": 0,
+        "phone_verification_code": 0,
+        "verify_phone": 0,
+        "marital_status": "single never married",
+        "country": "",
+        "address": "32 1st.",
+        "gender": "Male",
+        "score": "0",
+        "number_of_dependents": null,
+        "employment_status": "retired",
+        "income": 0,
+        "liability": 0,
+        "intended_use": "",
+        "created_at": "2017-11-17 19:49:11",
+        "updated_at": "2018-01-13 17:13:23",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImVkMzBlNzNjMzdlM2NlNGUyY2Q4YTc5YmNiOWRmNWI1NmNjZWJkZTBmN2ExOTE1MjRlOTJhZDU0MjNjZTcxZDJhN2JhZGY3ZjBkZTIzOGQ5In0.eyJhdWQiOiIxIiwianRpIjoiZWQzMGU3M2MzN2UzY2U0ZTJjZDhhNzliY2I5ZGY1YjU2Y2NlYmRlMGY3YTE5MTUyNGU5MmFkNTQyM2NlNzFkMmE3YmFkZjdmMGRlMjM4ZDkiLCJpYXQiOjE1MTU4NjQwMTksIm5iZiI6MTUxNTg2NDAxOSwiZXhwIjoxNTQ3NDAwMDE5LCJzdWIiOiI2MWRiOWNkYy1jYmQwLTExZTctODQ1OS0wMjc1ZDE2ZTc1YWMiLCJzY29wZXMiOltdfQ.g3qRTdL3x4jiP0OMxbOA7d1HCuE5lJANGkIXC4jX_hPaJ9AbEAJhXseFYAi1nyXoW49v-HRHjfrRDCq6-DHtzW_oXBU7I-wqeRM6X343GhPwsNvEHjh-56FuP67SywsbqkEByv21aEfi5pd_eJJOnlkGoF5ewIoCXECpbhuJIwpizbuAy4yWmZOR1lu6mtpBCz2KoGTVHQx6ub2RICwCJiC-dSM4Y4P48GTfDAizxyPFb_1l_uSMgtn-DsyCuO_RQ0iAxVfNtYO9Pt1T_ZCCnan6U4fAHCYOrSNmzk0R-Puh2VviF5EgN3t7kQKeft-l00d6FFh1W46tn5D4TGIs_j6wFD_zhSIwsaWw78mxFaDXh-7WZTnmnJshjnPZd7CliW96tNEvBDl3ALMjhClF9oesRREa35DT44BIVL3rZhlbkcLX9f0SYSzSvNA4KwfjLPzhoKYXla69NlhYzi4POX7E1E69bIKkhgIM4tIJVDyVZruDzD6mMSV5L5LjQNLMbxQFnezdQkNFuOkYG1kDu7w7sI8g6Qh8l2AIAnm-uGUR2MOYLln3ykzGsZgW8CYlwViClnW5YFkUwRnETD2_SVNDDc3a7HKJUTbLddrL6nFrDfIzaXQFCk24EVXBCjjXAMH0tycweRSYqAFjomwb3sJ-ZNLc7b4bgFuR1hZ_TEg"
+    },
+    "message": "Successful"
+}</code></pre>
+
+        <h2>uploadUserFiles</h2>
+        <h3>Please note that you have to send at least one parameter</h3>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/uploadUserFiles" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/uploadUserFiles",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "bank_statement" : (file),
+            "bank_statement_name" : "",
+            "hr_letter" : (file),
+            "hr_letter_name" : "",
+            "retirement_letter" : (file),
+            "retirement_letter_name" : "",
+            }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "1cbf6c60-23f6-11eb-b7b6-694a622fd720",
+        "first_name": "Nadine",
+        "last_name": "haija",
+        "facebook_id": null,
+        "apple_id": null,
+        "email": "haija.nadine@gmail.com",
+        "phone": "+962796053305",
+        "image": "",
+        "date_of_birth": "1992-06-13",
+        "occupation": null,
+        "profile_status": 1,
+        "id_image_front": "https://d2rnhiapqk46yc.cloudfront.net/HHWVtpyF6H0.jpeg",
+        "id_image_back": "https://d2rnhiapqk46yc.cloudfront.net/b7sCGl3Zgv2.jpeg",
+        "bank_statement": "https://d2rnhiapqk46yc.cloudfront.net/6qpxJ8jhtg1.png",
+        "bank_statement_name": "test",
+        "retirement_letter": "",
+        "retirement_letter_verified": 0,
+        "bank_statement_verified": 2,
+        "verify_id_image": 1,
+        "hr_letter": "https://d2rnhiapqk46yc.cloudfront.net/8kNh8IkJX19.png",
+        "hr_letter_name": "test",
+        "verify_hr_letter": 2,
+        "utility_bill": "https://d2rnhiapqk46yc.cloudfront.net/3zoH6HJ6ou0.jpeg",
+        "verify_utility_bill": 1,
+        "phone_verification_code": null,
+        "email_verification_code": null,
+        "verify_phone": 3,
+        "marital_status": "married in laws",
+        "country": null,
+        "address": "dabouq, amman",
+        "address_verified_by_admin": 100,
+        "gender": "female",
+        "language": "en",
+        "score": 714,
+        "freezed_points": "333.76",
+        "available_points": 380.24,
+        "gained_points": "0.00",
+        "number_of_dependents": "0",
+        "employment_status": "one to two years employed",
+        "income": "1000",
+        "liability": "400",
+        "personal_information_verified": 1,
+        "employment_history_verified": 1,
+        "income_verified": 1,
+        "liabilities_verified": 1,
+        "reputation_points": 150,
+        "got_rp_for_join_app": 1,
+        "got_rp_for_social_login": 0,
+        "got_rp_for_fully_verified": 1,
+        "personal_info_score": 174,
+        "employment_history_score": 120,
+        "income_score": 150,
+        "liabilities_score": 120,
+        "join_app_score": 50,
+        "social_login_score": 0,
+        "fully_verified_score": 100,
+        "created_at": "2020-11-11T10:15:51.000000Z",
+        "updated_at": "2020-12-12T14:58:35.000000Z",
+        "deleted_at": null,
+        "next_payment": "2020-12-25",
+        "next_payout": "2021-02-25",
+        "active_tanda_count": 1,
+        "is_blocked": false,
+        "available_limit": 300,
+        "max_limit": 300,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTMxYTZmN2FiMzhhZDhjNjkxODMwYTEzY2FmNzljZTU2ZTliOTczZTdiOTJkNjkyYmViM2E0NWE2OTdlNjU3YTllYTUxNWUzZmUxZWI3YjMiLCJpYXQiOjE2MDc3ODUxMTUsIm5iZiI6MTYwNzc4NTExNSwiZXhwIjoxNjA5MDgxMTEyLCJzdWIiOiIxY2JmNmM2MC0yM2Y2LTExZWItYjdiNi02OTRhNjIyZmQ3MjAiLCJzY29wZXMiOltdfQ.B8L_d4OzXBwJ3FQd_uhOgCHyd7WCk-ZkST3xkpvUqEbtzCusKQg9s3j5Txe1i2usE5MQyYNG3OglaFs36PRFtyI2npDSlr04gIqx2dQL7XtPoHYdVsFGpOXx4wDePcERYgUdYmA4wIUpzJAalTHVcTs4RvyCIxarCICTpu6o6yr8_6C_BcGIuO_KDYlJhCm4Ilsb-HjwbjCcI7jLbVvlMaynJv0p-lwR123dkC1RAJawWsKO1dBrkCNLPZhBRt5iVt2JFFXA0C7Llzn47UUU3q9i5gxfSSMyTVZqiOdhe_O4YP9R62qJ6lp3S0HU1VuG2yi9e_LFnXDmbc7KTd-H5wJFOoZjzWafJjLF8fFNfm6naCTRsAq0Sc0hRiZaSpPoyBsPmjhbEK6AZkS1L4yemm_WVW89_F2FZFB_BYwc49vFWSRdNWoITBTKxfztxG5T3djvN4ym54BsVcViv-EwMtqr16RUUzC2Mv4NqYpxopv0Lp1bXdSupGeI68fPTm03quaJlefEIyZh8kiCw79QGH8J3w9oZZgHDdfhMdsf1E5j-D3nEUTu0zrsIWh2PcRv47ZaL0cjS07IeeXgmfF14AWMCuhfIfVi-Uk-VuAodP1TgsklwK5nmBgReTYWE6n5ZuqolzPddueOaDaEcPyWEVkSN7Mmv7fj7Bf4PocFuj4",
+        "available_points_2": "380.24",
+        "number_of_tandas": 1
+    },
+    "message": "Success"
+}</code></pre>
+
+
+        <h2>changePassword</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/changePassword" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/changePassword",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "current_password" : "required",
+            "new_password" : "required|min:6|max:255",
+          }</code></pre>
+        <pre><code>response:{"status":0,"message":"Successful"}</code></pre>
+
+
+        <h2>getList</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/getList" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getList",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "key" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        "18-21",
+        "22-24",
+        "25-30",
+        "30-37",
+        "38-45",
+        "45-50",
+        "50-65",
+        "65+"
+    ],
+    "message": "Successful"
+}</code></pre>
+
+        <h2>nextPayout</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/nextPayout" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/nextPayout",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        {
+            "id": "526393d0-e27e-11e7-807e-0275d16e75ac",
+            "tanda_id": "5263047e-e27e-11e7-8007-0275d16e75ac",
+            "round_number": 2,
+            "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+            "slot_minimum_score": 190,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "payout_date": "2018-02-01",
+            "created_at": "2017-12-16 16:29:43",
+            "updated_at": "2017-12-16 16:54:46",
+            "code": "15134417837386"
+        },
+        {
+            "id": "5263ec54-e27e-11e7-9bb7-0275d16e75ac",
+            "tanda_id": "5263047e-e27e-11e7-8007-0275d16e75ac",
+            "round_number": 3,
+            "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+            "slot_minimum_score": 180,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "payout_date": "2018-03-01",
+            "created_at": "2017-12-16 16:29:43",
+            "updated_at": "2017-12-30 18:57:25",
+            "code": "15134417837386"
+        },
+        {
+            "id": "526484d4-e27e-11e7-afa4-0275d16e75ac",
+            "tanda_id": "5263047e-e27e-11e7-8007-0275d16e75ac",
+            "round_number": 4,
+            "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+            "slot_minimum_score": 170,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "payout_date": "2018-04-01",
+            "created_at": "2017-12-16 16:29:43",
+            "updated_at": "2017-12-16 16:30:09",
+            "code": "15134417837386"
+        },
+        {
+            "id": "5264d290-e27e-11e7-b1b4-0275d16e75ac",
+            "tanda_id": "5263047e-e27e-11e7-8007-0275d16e75ac",
+            "round_number": 5,
+            "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+            "slot_minimum_score": 160,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "payout_date": "2018-05-01",
+            "created_at": "2017-12-16 16:29:43",
+            "updated_at": "2018-01-04 17:04:14",
+            "code": "15134417837386"
+        }
+    ],
+    "message": "Successful"
+}</code></pre>
+
+        <h2>nextPayment</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/nextPayment" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getList",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        {
+            "id": "526393d0-e27e-11e7-807e-0275d16e75ac",
+            "tanda_id": "5263047e-e27e-11e7-8007-0275d16e75ac",
+            "round_number": 2,
+            "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+            "slot_minimum_score": 190,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "payout_date": "2018-02-01",
+            "created_at": "2017-12-16 16:29:43",
+            "updated_at": "2017-12-16 16:54:46",
+            "code": "15134417837386"
+        }
+    ],
+    "message": "Successful"
+}</code></pre>
+
+        <h2>withdraw</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/withdraw" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/withdraw",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "tanda_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+        <h2>cancelPublicTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/cancelPublicTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/cancelPublicTanda",
+    "method": "POST",
+    "headers": {
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "tanda_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+        <h2>inviteUsers</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/inviteUsers" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/inviteUsers",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id" : "required",
+            "email" : "",
+            "phone" : "",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+
+        <h2>confirmInvitation</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/confirmInvitation" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/confirmInvitation",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+
+        <h2>logout</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/logout" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/logout",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+        <h2>returnUser</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/returnUser" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/returnUser",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "da29de60-f7ee-11e9-8c36-e94f8657d9d0",
+        "first_name": "Mario",
+        "last_name": "harbr",
+        "facebook_id": null,
+        "email": "mario@gmail.com",
+        "phone": "+962796929290",
+        "image": "",
+        "date_of_birth": "1991-02-16",
+        "occupation": "nnnn",
+        "profile_status": 1,
+        "id_image": "",
+        "verify_id_image": 3,
+        "hr_letter": "",
+        "verify_hr_letter": 3,
+        "utility_bill": "http://127.0.0.1:1000/uploads/3",
+        "verify_utility_bill": 3,
+        "phone_verification_code": null,
+        "email_verification_code": null,
+        "verify_phone": 3,
+        "marital_status": null,
+        "country": null,
+        "address": null,
+        "address_verified_by_admin": "3",
+        "gender": "Female",
+        "score": 0,
+        "number_of_dependents": null,
+        "employment_status": null,
+        "income": null,
+        "liability": null,
+        "personal_information_verified": 2,
+        "employment_history_verified": 3,
+        "income_verified": 3,
+        "liabilities_verified": 3,
+        "reputation_points": 0,
+        "created_at": "2019-10-26 14:48:04",
+        "updated_at": "2019-10-26 14:48:42",
+        "deleted_at": null,
+        "apple_id": null,
+        "next_payment": "2019-12-02",
+        "next_payout": "2019-11-02",
+        "active_tanda_count": 2,
+        "available_limit": -1010,
+        "max_limit": "300",
+        "have_debt": 1,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjhlN2Q0MTAwODMxOGZkY2YwYzQ3NDU5OWI3ZjY1YTIzZGFhZmNhMGJkYTg3ZWVjYTEzYjI3ZjNlMzVjOTMyMWM0N2ZmYzFhMmIxODBjYTQ2In0.eyJhdWQiOiIxIiwianRpIjoiOGU3ZDQxMDA4MzE4ZmRjZjBjNDc0NTk5YjdmNjVhMjNkYWFmY2EwYmRhODdlZWNhMTNiMjdmM2UzNWM5MzIxYzQ3ZmZjMWEyYjE4MGNhNDYiLCJpYXQiOjE1ODcwNzI0NTYsIm5iZiI6MTU4NzA3MjQ1NiwiZXhwIjoxNjE4NjA4NDU2LCJzdWIiOiJkYTI5ZGU2MC1mN2VlLTExZTktOGMzNi1lOTRmODY1N2Q5ZDAiLCJzY29wZXMiOltdfQ.ed35CyUlV0WVQnh-uAbrdDslv377zBV9-rqMftIooWZoPiGeuI9xCgCVTEEJfnEszjgc82uXbJCDhTO-3OwR5KRFCEpkRQF6BcRTvt0woXRH-99VOVnS4uF4DhpkDmTzHEARHWV0aPrlwNmEc6YraoL_3zCXys43Xzv-Hv77-KERhvmvq5zAWeU80tOJS267VoF-ov7bfGmU-xyWg3uXRCKqTRi1FW6h7GNvdgHVuq31uXMmQXKExustMGmhPdE7EQqHGrTkLatSnVCVXy4zt06T_2MhcdOWMVmWGnruGuDcebhD31FYOxERW2get-XNzHG3J-slw47O8AVif2woGSdRizxrCNvyo-6h8YhMUntSvh_gL9Y93pTiU9Amhm7HXdfxoQb1PliSv-VTQJRfi-t5Nly_B-OFH8RAzsd3NTjgVib2r0gAQeF4ziRzH4l5zGYjEeDb6ipJAhhB22-q2y4U5Zw9s4UufJzcv0On59I5RpAm6BnJoI4ttnZUsDq3ZjuREAQHZLkgaQh0NkDY7VD__kJjH69xKHGRG9It6GWz-U_1QAfFUlZiOnY2RKVq0K-d6l_8mBqEHtwdoJWSHMZvf5jkKE8aDWZLjnj8BfHxmmvY3kZXf3KT8TiBFYs53PEqcDUcXI8JP9wJPrdjTgQ81UqjS2RaoCadpv-i0Lo"
+    },
+    "message": "Success"
+}</code></pre>
+
+        <h2>improveScore</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/improveScore" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/improveScore",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        {
+            "title": "Marital status",
+            "text": "Marital status",
+            "value": "married in laws",
+            "status": 1,
+            "type": "drop_down",
+            "description": "Describe Marital status"
+        },
+        {
+            "title": "Number of dependants",
+            "text": "Number of dependants",
+            "value": "0",
+            "status": 1,
+            "type": "text",
+            "description": "Describe Number of dependants"
+        },
+        {
+            "title": "Address",
+            "text": "Address",
+            "value": "dabouq, amman",
+            "status": 1,
+            "type": "address"
+        },
+        {
+            "title": "ID image",
+            "text": "ID image",
+            "value": "",
+            "id_image_front": "https://d2rnhiapqk46yc.cloudfront.net/HHWVtpyF6H0.jpeg",
+            "id_image_back": "https://d2rnhiapqk46yc.cloudfront.net/b7sCGl3Zgv2.jpeg",
+            "status": 1,
+            "type": "image_id",
+            "description": "Describe IDImage"
+        },
+        {
+            "title": "Utility bill",
+            "text": "Utility bill",
+            "value": "https://d2rnhiapqk46yc.cloudfront.net/3zoH6HJ6ou0.jpeg",
+            "status": 1,
+            "type": "image",
+            "description": "Describe Utility bill"
+        },
+        {
+            "title": "Employment status",
+            "text": "Employment status",
+            "value": "one to two years employed",
+            "hr_letter": "https://d2rnhiapqk46yc.cloudfront.net/8kNh8IkJX19.png",
+            "hr_letter_name": "test",
+            "bank_statement": "https://d2rnhiapqk46yc.cloudfront.net/6qpxJ8jhtg1.png",
+            "bank_statement_name": "test",
+            "retirement_letter": "",
+            "status": 1,
+            "type": "employment",
+            "description": "Describe Employment status"
+        },
+        {
+            "title": "Income",
+            "text": "Income",
+            "value": "1000",
+            "status": 1,
+            "type": "text",
+            "description": "Describe Income"
+        },
+        {
+            "title": "Liability",
+            "text": "Liability",
+            "value": "400",
+            "status": 1,
+            "type": "text",
+            "description": "Describe Liability"
+        }
+    ],
+    "message": "Success"
+}</code></pre>
+
+        <h2>deletePrivateTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/deletePrivateTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/deletePrivateTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "tanda_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+        <h2>startTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/startTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/startTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "tanda_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+
+        <h2>supportForm</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/supportForm" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/supportForm",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "email" : "required",
+            "massage" : "required",
+            "name" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "6c3400aa-01d3-11e8-90fd-0275d16e75ac",
+        "email": "mario@gmail.com",
+        "massage": "sdfghjk",
+        "name": "bhjkl;",
+        "updated_at": "2018-01-25 13:26:59",
+        "created_at": "2018-01-25 13:26:59"
+    },
+    "message": "Successful"
+}</code></pre>
+
+        <h2>forgetPassword</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/forgetPassword" \
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/forgetPassword",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "email" : "required",
+          }</code></pre>
+        <pre><code>response:{"status":0,"data":{},"message":"Successful"}</code></pre>
+
+
+        <h2>resetPassword</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/resetPassword" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/resetPassword",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "email" : "required",
+            "digits" : "required",
+            "new_password" : "required",
+          }</code></pre>
+        <pre><code>response:{"status":0,"data":{},"message":"Successful"}</code></pre>
+
+        <h2>getTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/getTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "tanda_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        {
+            "id": "056b6e20-8e63-11ea-92b6-854c0796d038",
+            "tanda_id": "0569bbe0-8e63-11ea-b4b8-f7d1ecb4d98e",
+            "round_number": 1,
+            "user_id": null,
+            "slot_minimum_score": null,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "intended_use": null,
+            "invitation_sent": 1,
+            "payout_date": "2020-08-24",
+            "is_paid_out": 0,
+            "created_at": "2020-05-04 23:57:33",
+            "updated_at": "2020-05-04 23:57:33",
+            "deleted_at": null,
+            "username": "Amr Ahmed",
+            "link": "",
+            "user": null
+        },
+        {
+            "id": "05717f40-8e63-11ea-99fb-5f714b4bd486",
+            "tanda_id": "0569bbe0-8e63-11ea-b4b8-f7d1ecb4d98e",
+            "round_number": 2,
+            "user_id": null,
+            "slot_minimum_score": null,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "intended_use": null,
+            "invitation_sent": 0,
+            "payout_date": "2020-09-24",
+            "is_paid_out": 0,
+            "created_at": "2020-05-04 23:57:33",
+            "updated_at": "2020-05-04 23:57:33",
+            "deleted_at": null,
+            "username": "",
+            "link": "",
+            "user": null
+        },
+        {
+            "id": "05762f80-8e63-11ea-9e9c-3f67e0ed187e",
+            "tanda_id": "0569bbe0-8e63-11ea-b4b8-f7d1ecb4d98e",
+            "round_number": 3,
+            "user_id": null,
+            "slot_minimum_score": null,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "intended_use": null,
+            "invitation_sent": 0,
+            "payout_date": "2020-10-24",
+            "is_paid_out": 0,
+            "created_at": "2020-05-04 23:57:33",
+            "updated_at": "2020-05-04 23:57:33",
+            "deleted_at": null,
+            "username": "",
+            "link": "",
+            "user": null
+        },
+        {
+            "id": "057b1ea0-8e63-11ea-b751-2727e706d9cb",
+            "tanda_id": "0569bbe0-8e63-11ea-b4b8-f7d1ecb4d98e",
+            "round_number": 4,
+            "user_id": null,
+            "slot_minimum_score": null,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "intended_use": null,
+            "invitation_sent": 0,
+            "payout_date": "2020-11-24",
+            "is_paid_out": 0,
+            "created_at": "2020-05-04 23:57:33",
+            "updated_at": "2020-05-04 23:57:33",
+            "deleted_at": null,
+            "username": "",
+            "link": "",
+            "user": null
+        }
+    ],
+    "message": "Success"
+}</code></pre>
+
+        <h2>updateUserDeviceToken</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/updateUserDeviceToken" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/resetPassword",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "device_token" : "required",
+            "type" : "required",
+          }</code></pre>
+        <pre><code>response:{"status":0,"data":{},"message":"Successful"}</code></pre>
+
+
+        <h2>manageTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/manageTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/resetPassword",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+	"tanda_id":"cfd58f14-0ecd-11e8-b7cd-0275d16e75ac",
+	"slots":[
+		{
+		"id":"cfd63838-0ecd-11e8-b8ea-0275d16e75ac",
+		"user_id":"tesasdas"
+		},
+		{
+		"id":"cfd6a12e-0ecd-11e8-89c4-0275d16e75ac",
+		"user_id":"tesasdas"
+		}
+	]
+
+}</code></pre>
+        <pre><code>response:
+            {
+    "status": 0,
+    "data": {},
+    "message": "Successful"
+}</code></pre>
+
+
+        <h2>getTandaBySlotId</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/getTandaBySlotId" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getTandaBySlotId",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+	"slot_id":"cfd58f14-0ecd-11e8-b7cd-0275d16e75ac",
+}</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "026f1014-2461-11e8-b8b5-0275d16e75ac",
+        "code": "cHa6x",
+        "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+        "number_of_rounds": 5,
+        "false_placement": 0,
+        "false_placement_range": 0,
+        "contribution_amount": 50,
+        "payout_amount": 250,
+        "ability_to_split_rounds": 0,
+        "start_date": "2018-03-10",
+        "end_date": "2018-08-10",
+        "type": "Private",
+        "status": "Pending",
+        "created_at": "2018-03-10 12:46:10",
+        "updated_at": "2018-03-10 12:46:10"
+    },
+    "message": "Successful"
+}</code></pre>
+
+        <h2>Send OTP Dinarak</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/payNextPayment" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/payNextPayment",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id":"1243",
+            "phone_number":"1243",
+}</code></pre>
+        <pre><code>response: {
+        "errorCd": "00",
+        "desc": "Success",
+        "referenceId": "425203",
+        "statusCode": "1"
+    },
+    "message": "Successful"
+}</code></pre>
+
+        <h2>Set Payout slot settings</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/payoutSlotSettings" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/payoutSlotSettings",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id":"1243",
+            "phone_number":"1243"(required in case type is e-wallet or dinarak),
+            "type":" e-wallet or dinarak or iban",
+}</code></pre>
+        <pre><code>response: {
+        "errorCd": "00",
+        "desc": "Success",
+        "referenceId": "425203",
+        "statusCode": "1"
+    },
+    "message": "Successful"
+}</code></pre>
+
+
+        <h2>Verify OTP Dinarak</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/verifyOTPDinark" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/verifyOTPDinark",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            	"otp":"1243",
+            	"slot_id":"1243",
+}</code></pre>
+        <pre><code>response: {
+        "errorCd": "00",
+        "desc": "Success",
+        "referenceId": "425203",
+        "statusCode": "1"
+    },
+    "message": "Successful"
+}</code></pre>
+        <!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+
+        <h2>Assign Private Tanda Creator To Slot</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/assignPTCreatorToSlot" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/assignPTCreatorToSlot",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            	"slot_id":"3b9376e6",
+}</code></pre>
+        <pre><code>response: {
+    "status": 0,
+    "data": [
+        {
+            "id": "3b9376e6-9f3f-11e9-90c8-c8d3ff777686",
+            "tanda_id": "3b9240aa-9f3f-11e9-a8dd-c8d3ff777686",
+            "round_number": 1,
+            "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+            "slot_minimum_score": null,
+            "user_score": null,
+            "minimum_score_met": 1,
+            "intended_use": null,
+            "invitation_sent": 0,
+            "payout_date": "2019-10-01",
+            "created_at": "2019-07-05 16:09:14",
+            "updated_at": "2019-07-12 16:47:20"
+        }
+    ],
+    "message": "Successful"
+}</code></pre>
+
+        <h2>Payment Details</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/paymentDetails" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/paymentDetails",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            	"slot_id":"3b9376e6",
+}</code></pre>
+        <pre><code>response: {
+    "status": 0,
+    "data": {
+        "id": 7,
+        "tanda_rounds_setting_id": "3b9376e6-9f3f-11e9-90c8-c8d3ff777686",
+        "user_id": "61db9cdc-cbd0-11e7-8459-0275d16e75ac",
+        "payment_type": "DINARAK",
+        "is_paid": 0,
+        "paid_at": "2019-06-29 15:32:34",
+        "contribution_amount": 0,
+        "amount_paid": 0,
+        "tanda_fee": 0,
+        "total": 0,
+        "payment_method_fee": 0,
+        "created_at": null,
+        "updated_at": null
+    },
+    "message": "Successful"
+}</code></pre>
+
+        <h2>rejectInvitation</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/rejectInvitation" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/rejectInvitation",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+
+        <h2>removeUserFromTanda</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/removeUserFromTanda" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/removeUserFromTanda",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+        <!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+
+        <h2>loginWithApple</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/loginWithApple" \
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/loginWithApple",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "email" : "required",
+            "full_name" : "required",
+            "apple_id" : "required",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "id": "03122520-93e6-11ea-bb46-6f635dbf84e2",
+        "first_name": "Charlene",
+        "last_name": "Mayfield-Davis",
+        "facebook_id": null,
+        "email": "mario@gmail.com",
+        "apple_id": "001787.9aeac3e281394a239f4d52d7c6257a51.0017",
+        "phone": "",
+        "image": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10157811022170589&height=800&width=800&ext=1601561537&hash=AeSs256BoFKo8FRB",
+        "date_of_birth": "2020-12-21",
+        "occupation": null,
+        "profile_status": 1,
+        "id_image_front": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "id_image_back": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "bank_statement": "",
+        "retirement_letter": null,
+        "retirement_letter_verified": 0,
+        "verify_id_image": 3,
+        "hr_letter": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_hr_letter": 3,
+        "utility_bill": "http://127.0.0.1:8000/uploads/123qsda.jpg",
+        "verify_utility_bill": 3,
+        "phone_verification_code": null,
+        "email_verification_code": null,
+        "verify_phone": 3,
+        "marital_status": null,
+        "country": null,
+        "address": null,
+        "address_verified_by_admin": "3",
+        "gender": null,
+        "language": null,
+        "score": 450.12,
+        "number_of_dependents": null,
+        "employment_status": null,
+        "income": null,
+        "liability": null,
+        "personal_information_verified": 2,
+        "employment_history_verified": 3,
+        "income_verified": 3,
+        "liabilities_verified": 3,
+        "reputation_points": 0,
+        "got_rp_for_join_app": 0,
+        "got_rp_for_social_login": 0,
+        "got_rp_for_fully_verified": 0,
+        "created_at": "2020-05-12T02:17:49.000000Z",
+        "updated_at": "2020-09-11T13:15:15.000000Z",
+        "deleted_at": null,
+        "freezed_points": 298.72,
+        "available_points": 151.4,
+        "gained_points": 2.36,
+        "next_payment": "",
+        "next_payout": "",
+        "active_tanda_count": 0,
+        "available_limit": "300",
+        "max_limit": "300",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTkyZDAyYzI0YTA0ZTQxMDZkNTgxYzQxMmQ1MzE0M2E3MjQ3MWJmMjA1MTU4YWZmMjE0MmU2NGNkNmExN2I2ZTE3MGU5YTJiMGNmOTRlZWQiLCJpYXQiOjE2MDA1MjcyNTksIm5iZiI6MTYwMDUyNzI1OSwiZXhwIjoxNjMyMDYzMjU5LCJzdWIiOiIwMzEyMjUyMC05M2U2LTExZWEtYmI0Ni02ZjYzNWRiZjg0ZTIiLCJzY29wZXMiOltdfQ.I6XtvKjpe_caakGSdGsElg0gn_4aUrIMboOab87wQmw2QalIQhH41ml0elGZenmNvRfeeQrVjnn2HR2LwR0o-q1C3eiU3vE130D9odfE-6mjmWZt6yV9FskUGcPDJ_VItraWQA6tggwd8UxQZbUXiqvyrJtAiBHGS1nCnsrH1ZnTn0LM4sq2lidCzFAqQomtRaZUpvO7v8xg_4hrHq0FwsxRTqWXkB7YTpJ7c-Q5VoO_scOhGHjLbmGzzBRbhnLNM1K4qFIZl4iDlFM3CCtY5AlazC3GGit-lkEj56ZWIsmp3ktXRZaAQloH7Z55NKupFtbCy9NqAnybhvGRXCZDVcLpYaPtSBQWNsO3AmxVfq2It4pxZ3W0kptx0chXXTBa1AuV7iXOIqlyDt0xgkoJYs9DG6le_gJQE6dB4LAWvOz7hJx5A4TYMS85GvxAKvY2hUN_PgUglch1uTrAIfLFehbbQvRZ6uPlygLOkWimNNjM-N0BuQFUBsWRs38viCJvRhdkuH4H-GVSUClbtGR_-kv1LjqVdLKU9NmDXZ9kN9Pum88CuKqWufJFKKxE-NzVuHb03ZzAt9CSoMwSRIJXapSM64DpfpQ_iGd_cEhJA0gUHrdNGdVqD-Gq48UfrrQoCGRtYceXrv2elT_nQWSIYWaYyYeHy8GV5ME-x743_Uo"
+    },
+    "message": "Success"
+}</code></pre>
+
+        <h2>resendInvitationUser</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/resendInvitationUser" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/resendInvitationUser",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>  payloads:{
+            "slot_id" : "required",
+            "email" : "",
+            "phone" : "",
+          }</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "message": "Successful"
+}</code></pre>
+        </code></pre>
+
+        <h2>getFilterParam</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/getFilterParam" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/getFilterParam",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>payloads:{}</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": {
+        "monthly_contribution": [
+            {
+                "id": "bd1300f0-df38-11ea-93a0-e34e0bcbb51e",
+                "value": "30"
+            },
+            {
+                "id": "d37ed0f0-e0cf-11ea-a681-effa635ac13b",
+                "value": "20"
+            }
+        ],
+        "available_payout_date": [
+            {
+                "id": "d387c2d0-e0cf-11ea-8ce8-c56d59272d0d",
+                "value": "2020-10-01"
+            },
+            {
+                "id": "d3a25fe0-e0cf-11ea-b53a-b77de9a1c904",
+                "value": "2020-11-01"
+            },
+            {
+                "id": "d3ba9360-e0cf-11ea-bd80-530979ae77fa",
+                "value": "2020-12-01"
+            },
+            {
+                "id": "d3d4fd40-e0cf-11ea-9a92-2d19fc0eef76",
+                "value": "2021-01-01"
+            },
+            {
+                "id": "d3edf520-e0cf-11ea-9933-d5524df72c46",
+                "value": "2021-02-01"
+            },
+            {
+                "id": "d4064aa0-e0cf-11ea-b0c3-7184f74e741d",
+                "value": "2021-03-01"
+            },
+            {
+                "id": "d42155d0-e0cf-11ea-b30c-17c38ee26452",
+                "value": "2021-04-01"
+            },
+            {
+                "id": "d439b300-e0cf-11ea-a465-e96e91895679",
+                "value": "2021-05-01"
+            },
+            {
+                "id": "d4538590-e0cf-11ea-b7f2-21fc81aa1999",
+                "value": "2021-06-01"
+            },
+            {
+                "id": "d46e41d0-e0cf-11ea-bf56-ab70cef626a6",
+                "value": "2021-07-01"
+            }
+        ]
+    },
+    "message": "Success"
+}</code></pre>
+
+
+        <h2>filterTandas</h2>
+        <blockquote>
+            <p>Example request:</p>
+        </blockquote>
+        <pre><code class="language-bash">curl -X POST "http://165.227.120.37/api/v1/filterTandas" \
+            -H "Authorization: Bearer Token"
+            -H "Accept: application/json"</code></pre>
+        <pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://165.227.120.37/api/v1/filterTandas",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+"Authorization": "Bearer Token"
+            }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+        <pre><code>payloads:{
+"contribution":["bd1300f0-df38-11ea-93a0-e34e0bcbb51e","d37ed0f0-e0cf-11ea-a681-effa635ac13b"],
+"payout":["2020-11-01","2021-02-01", "2021-01-01"]
+}</code></pre>
+        <pre><code>response:{
+    "status": 0,
+    "data": [
+        {
+            "id": "bd1300f0-df38-11ea-93a0-e34e0bcbb51e",
+            "code": "YVZDMP",
+            "nickname": null,
+            "creator_id": "1caa81c3-f274-11e9-a23a-0275d16e75ac",
+            "creator_type": "App\\Admin",
+            "number_of_rounds": 5,
+            "false_placement": 0,
+            "false_placement_range": null,
+            "contribution_amount": 30,
+            "payout_amount": 150,
+            "ability_to_split_rounds": 0,
+            "start_date": "2020-09-01",
+            "end_date": "2021-01-01",
+            "type": "Public",
+            "status": "Pending",
+            "archived": 0,
+            "created_at": "2020-08-15T20:48:57.000000Z",
+            "updated_at": "2020-08-15T20:48:57.000000Z",
+            "deleted_at": null,
+            "slot": {
+                "id": "bd5767c0-df38-11ea-9739-f96595b71e2a",
+                "tanda_id": "bd1300f0-df38-11ea-93a0-e34e0bcbb51e",
+                "round_number": 5,
+                "user_id": null,
+                "slot_minimum_score": 298.72,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2021-02-01",
+                "is_paid_out": 0,
+                "created_at": "2020-08-15T20:48:57.000000Z",
+                "updated_at": "2020-08-15T20:48:57.000000Z",
+                "deleted_at": null,
+                "can_join": 1
+            }
+        },
+        {
+            "id": "d37ed0f0-e0cf-11ea-a681-effa635ac13b",
+            "code": "VZO9PI",
+            "nickname": null,
+            "creator_id": "1caa81c3-f274-11e9-a23a-0275d16e75ac",
+            "creator_type": "App\\Admin",
+            "number_of_rounds": 10,
+            "false_placement": 0,
+            "false_placement_range": null,
+            "contribution_amount": 20,
+            "payout_amount": 200,
+            "ability_to_split_rounds": 0,
+            "start_date": "2020-09-01",
+            "end_date": "2021-06-01",
+            "type": "Public",
+            "status": "Pending",
+            "archived": 0,
+            "created_at": "2020-08-17T21:22:59.000000Z",
+            "updated_at": "2020-08-17T21:22:59.000000Z",
+            "deleted_at": null,
+            "slot": {
+                "id": "d3a25fe0-e0cf-11ea-b53a-b77de9a1c904",
+                "tanda_id": "d37ed0f0-e0cf-11ea-a681-effa635ac13b",
+                "round_number": 2,
+                "user_id": null,
+                "slot_minimum_score": 549,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2020-11-01",
+                "is_paid_out": 0,
+                "created_at": "2020-08-17T21:23:00.000000Z",
+                "updated_at": "2020-08-17T21:23:00.000000Z",
+                "deleted_at": null,
+                "can_join": 1
+            }
+        },
+        {
+            "id": "d37ed0f0-e0cf-11ea-a681-effa635ac13b",
+            "code": "VZO9PI",
+            "nickname": null,
+            "creator_id": "1caa81c3-f274-11e9-a23a-0275d16e75ac",
+            "creator_type": "App\\Admin",
+            "number_of_rounds": 10,
+            "false_placement": 0,
+            "false_placement_range": null,
+            "contribution_amount": 20,
+            "payout_amount": 200,
+            "ability_to_split_rounds": 0,
+            "start_date": "2020-09-01",
+            "end_date": "2021-06-01",
+            "type": "Public",
+            "status": "Pending",
+            "archived": 0,
+            "created_at": "2020-08-17T21:22:59.000000Z",
+            "updated_at": "2020-08-17T21:22:59.000000Z",
+            "deleted_at": null,
+            "slot": {
+                "id": "d3d4fd40-e0cf-11ea-9a92-2d19fc0eef76",
+                "tanda_id": "d37ed0f0-e0cf-11ea-a681-effa635ac13b",
+                "round_number": 4,
+                "user_id": null,
+                "slot_minimum_score": 459.64,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2021-01-01",
+                "is_paid_out": 0,
+                "created_at": "2020-08-17T21:23:00.000000Z",
+                "updated_at": "2020-08-17T21:23:00.000000Z",
+                "deleted_at": null,
+                "can_join": 1
+            }
+        },
+        {
+            "id": "d37ed0f0-e0cf-11ea-a681-effa635ac13b",
+            "code": "VZO9PI",
+            "nickname": null,
+            "creator_id": "1caa81c3-f274-11e9-a23a-0275d16e75ac",
+            "creator_type": "App\\Admin",
+            "number_of_rounds": 10,
+            "false_placement": 0,
+            "false_placement_range": null,
+            "contribution_amount": 20,
+            "payout_amount": 200,
+            "ability_to_split_rounds": 0,
+            "start_date": "2020-09-01",
+            "end_date": "2021-06-01",
+            "type": "Public",
+            "status": "Pending",
+            "archived": 0,
+            "created_at": "2020-08-17T21:22:59.000000Z",
+            "updated_at": "2020-08-17T21:22:59.000000Z",
+            "deleted_at": null,
+            "slot": {
+                "id": "d3edf520-e0cf-11ea-9933-d5524df72c46",
+                "tanda_id": "d37ed0f0-e0cf-11ea-a681-effa635ac13b",
+                "round_number": 5,
+                "user_id": null,
+                "slot_minimum_score": 420.57,
+                "user_score": null,
+                "minimum_score_met": 1,
+                "intended_use": null,
+                "invitation_sent": 0,
+                "payout_date": "2021-02-01",
+                "is_paid_out": 0,
+                "created_at": "2020-08-17T21:23:00.000000Z",
+                "updated_at": "2020-08-17T21:23:00.000000Z",
+                "deleted_at": null,
+                "can_join": 1
+            }
+        }
+    ],
+    "message": "Success"
+}</code></pre>
+        <!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+
+    </div>
+    <div class="dark-box">
+        <div class="lang-selector">
+            <a data-language-name="bash" href="#">bash</a>
+            <a data-language-name="javascript" href="#">javascript</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Exceptions\CustomQueryException;
+use App\Models\Item;
 use App\Repositories\ItemRepository;
 
 class ItemsService
@@ -28,30 +29,30 @@ class ItemsService
 
     /**
      * @param array $data
-     * @return mixed
+     * @return Item
      * @throws CustomQueryException
      */
-    public function create(array $data)
+    public function create(array $data): Item
     {
         return $this->itemRepository->create($data);
     }
 
     /**
      * @param int $id
-     * @return mixed
+     * @return Item
      * @throws CustomQueryException
      */
-    public function getOneById(int $id)
+    public function getOneById(int $id): Item
     {
         return $this->itemRepository->findOneBy(['id' => $id]);
     }
 
     /**
      * @param array $data
-     * @return mixed
+     * @return Item
      * @throws CustomQueryException
      */
-    public function update(array $data)
+    public function update(array $data): Item
     {
         $this->itemRepository->update($this->itemRepository->findOneBy(['id' => $data['id']]), $data);
         return $this->itemRepository->findOneBy(['id' => $data['id']]);
@@ -62,24 +63,24 @@ class ItemsService
      * @return mixed
      * @throws CustomQueryException
      */
-    public function delete(int $id)
+    public function delete(int $id): bool
     {
         $this->itemRepository->findOneBy(['id' => $id]);
         return $this->itemRepository->delete($id);
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function totalPriceCurrentMonth()
+    public function totalPriceCurrentMonth(): int
     {
         return $this->itemRepository->totalPriceCurrentMonth();
     }
 
     /**
-     * @return mixed
+     * @return float
      */
-    public function totalPriceAverage()
+    public function totalPriceAverage(): float
     {
         return round($this->itemRepository->totalPriceAverage(), 2);
     }
